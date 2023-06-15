@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฝึกหัด JavaScript</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@200&family=Sigmar&display=swap" rel="stylesheet">
+    <script src="style.js"></script>
+    
+</head >
+
+    <link rel="stylesheet" href="style.css">
+    
+
+<body  class="color" >
+    <h3>ข้อที่ 1 แสดงคําว่า สวัสดีชาวโลก ด้วยข้อความสีดํา แล้วเมื่อกดปุ่ม เปลี่ยนสีให้เปลี่ยนเป็นสีแดง </h3>
+    <h1 class="centerg" id="header">สวัสดีชาวโลก</h1>
+    <div class="centerg"><button type="button" onclick="document.getElementById('header').style.color='red'">เปลี่ยนสี </button></div>
+    
+    <h3>ข้อ2 วันที่และเวลาปัจจุบัน</h3>
+    <p id="current-datetime"></p>
+    <!-- <button id="refresh-button">Refresh</button> -->
+    <script src="style.js"></script>
+
+    
+    <h3 class="cat">ข้อ3</h3>
+    <p>ให้แสดงภาพแมว ซึ่งสามารถสลับท่ทางของแมวตามการกดปุ่มได้</p>
+    <button  class="cat" onclick="document.getElementById('myImage').src='images/Idle.png'">แมวยืน</button>
+    <img class="cat" id="myImage" src='images/Idle.png' width=10%>
+    <button class="cat" onclick="document.getElementById('myImage').src='images/Slide.png'">แมวสไลด์</button>
+    
+    <h3>ข้อ4 สร้างปุ่มซ่อนหรือแสดงตาราง</h3>
+    <button type="button" onclick="document.getElementById('table').style.display = 'table'">แสดงตาราง</button>
+    <button type="button" onclick="document.getElementById('table').style.display = 'none';">ซ่อนแสดงตาราง</button>
+    <p></p>
+    <table  class="my-table" id="table">
+        <tr>
+            <th>รายการที่1</th>
+            <th>รายการที่2</th>
+            <th>รายการที่3</th>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>16</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td>128</td>
+            <td>256</td>
+        </tr>
+        
+    </table>
+
+    
+    <h2>ข้อ5</h2>
+    <div class="container">
+        <div class="input-group">
+            <label for="number2">Number #1 </label><br>
+            <input type="number" id="num1" required>
+        </div>
+        <div class="input-group">
+          <label for="number2">Number #2 </label><br>
+          <input type="number" id="num2" required>
+        </div>
+        <div class="input-group">
+          <label for="number3">Number #3</label><br>
+          <input type="number" id="num3" required>
+        </div>
+        <button class="button" onclick="calculate()">Submit</button>
+        <div id="result" class="result"></div>
+      </div>
+      
+      <script>
+      function calculate() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var num3 = parseFloat(document.getElementById("num3").value);
+      
+        var average = (num1 + num2 + num3) / 3;
+        var max = Math.max(num1, num2, num3);
+        var min = Math.min(num1, num2, num3);
+      
+        document.getElementById("result").innerHTML = "ค่าเฉลี่ยคือ: " + average.toFixed(2) + "<br>ค่าสูงสุดคือ: " + max + "<br>ค่าต่ำสุดคือ: " + min;
+      }
+      </script>
+
+
+
+</body>
+</html>

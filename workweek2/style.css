@@ -1,0 +1,26 @@
+body{
+    background-color: chocolate;
+}
+.my-table{
+    border-collapse: collapse;
+    
+}
+.my-table,th,td{
+    border: 1px solid black;
+}
+td{
+    background-color: whitesmoke;
+}
+th{
+    background-color: bisque;
+}
+button.centerg{
+    font-family: 'Sigmar', cursive;
+}
+div,label{
+    font-family: 'Niramit', sans-serif;
+}
+#refresh-button {
+    margin-top: 10px;
+  }
+  
